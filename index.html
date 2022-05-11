@@ -11,6 +11,11 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav>
@@ -18,12 +23,14 @@
 
       <div class="navigation">
         <ul>
+          <i id="menu-close" class="fas fa-times"></i>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Courses</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+        <img id="menu" src="images/menu.png" alt="" />
       </div>
     </nav>
 
@@ -163,37 +170,24 @@
 
     <section id="registration">
       <div class="reminder">
-      <p>Get Our Online Courses for Free</p>
-      <h1>Register To Get Our Courses</h1>
-      <div class="time">
-        <div class="date">
-          30<br>Days
+        <p>Get Our Online Courses for Free</p>
+        <h1>Register To Get Our Courses</h1>
+        <div class="time">
+          <div class="date">30<br />Days</div>
+          <div class="date">18<br />Hours</div>
+          <div class="date">54<br />Minutes</div>
+          <div class="date">21<br />Seconds</div>
         </div>
-        <div class="date">
-          18<br>Hours
-        </div>
-        <div class="date">
-          54<br>Minutes
-        </div>
-        <div class="date">
-          21<br>Seconds
-        </div>
-      </div>
       </div>
       <div class="form">
-        <h3>Create your Account Now!!!! </h3>
-        <input type="text" placeholder="Name" name="" id="">
-        <input type="text" placeholder="Email" name="" id="">
-        <input type="text" placeholder="Phone" name="" id="">
+        <h3>Create your Account Now!!!!</h3>
+        <input type="text" placeholder="Name" name="" id="" />
+        <input type="text" placeholder="Email" name="" id="" />
+        <input type="text" placeholder="Phone" name="" id="" />
         <div class="btn">
           <a class="blue" href="#">Submit</a>
-          
         </div>
-
       </div>
-
-
-
     </section>
 
     <footer>
@@ -217,11 +211,24 @@
       </div>
       <div class="footer-col">
         <h3>Newsletter</h3>
-        <p>you can trust us, we only send promo offer</p>
-        <input type="text" placeholder="Your Email Address">
-        <a href="#" class="yellow">SUBSCRIBE</a>
+        <div class="subscribe">
+          <p>you can trust us, we only send promo offer</p>
+          <input type="text" placeholder="Your Email Address" />
+          <a href="#" class="blue">SUBSCRIBE</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>©2022, EDU-LAB. All Rights Reserved</p>
       </div>
     </footer>
 
+    <script>
+      $("#menu").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
   </body>
 </html>
