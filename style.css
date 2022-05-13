@@ -44,15 +44,8 @@ nav img {
 nav .navigation {
   display: flex;
 }
-#menu {
-  width: 30px;
-  height: 30px;
-  display: none;
-}
 
-#menu-close {
-  display: none;
-}
+
 nav .navigation ul {
   display: flex;
   justify-content: flex-end;
@@ -75,6 +68,18 @@ nav .navigation ul li a.active,
 nav .navigation ul li a:hover {
   color: #fdc93b;
 }
+/* nav-menu */
+
+#menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+}
+
 /* home-section */
 
 #home {
@@ -373,7 +378,7 @@ footer .copyright {
   flex-wrap: wrap;
 }
 
-/* About */
+/* About home*/
 
 #about-home {
   background-image: linear-gradient(
@@ -419,6 +424,7 @@ footer .copyright {
   color: #69839e;
   padding-bottom: 15px;
 }
+/* contact */
 
 #contact{
   padding: 150px;
@@ -439,6 +445,7 @@ footer .copyright {
   color: #082d54;
   padding-bottom: 15px;
 }
+/* responsive */
 
 @media (max-width: 769px) {
   nav {

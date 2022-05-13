@@ -26,16 +26,17 @@
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>          
           <li><a class="active" href="course.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
       </div>
     </nav>
 
-    <section id="about-home">
+<!-- course-inner-section -->
+    <section id="course-inner-home">
       <h2>Course Details</h2>
     </section>
 
@@ -62,6 +63,7 @@
          
     </section>
 
+     <!-- footer -->
     <footer>
       <div class="footer-col">
         <h3>Top Courses</h3>
@@ -93,7 +95,8 @@
         <p>©2022, EDU-LAB. All Rights Reserved</p>
       </div>
     </footer>
-
+    
+ <!-- JavaScript for navbar closing -->
     <script>
       $("#menu").click(function () {
         $("nav .navigation ul").addClass("active");

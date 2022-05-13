@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edu-Lab</title>
+    <title>EDU-LAB</title>
+
+    
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     />
-
+    
     <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
   </head>
   <body>
     <!-- navigation -->
@@ -26,14 +30,16 @@
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
           <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>         
           <li><a href="course.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
       </div>
     </nav>
+
+   <!-- home-section -->
 
     <section id="home">
       <h2>Enhance Your Skills with EDU-LAB</h2>
@@ -42,11 +48,14 @@
         & cutting edge technology. With offerings ranging from adaptive
         self-learning courses on apps & web to personalised.
       </p>
+
       <div class="btn">
         <a class="blue" href="#">Explore Learning</a>
         <a class="yellow" href="#">Our Courses</a>
       </div>
     </section>
+
+    <!-- features -->
 
     <section id="features">
       <h1>World Class Facilities</h1>
@@ -80,6 +89,8 @@
         </div>
       </div>
     </section>
+
+
     <!-- Course -->
 
     <section id="course">
@@ -167,6 +178,7 @@
         </div>
       </div>
     </section>
+
     <!-- Registration -->
 
     <section id="registration">
@@ -191,6 +203,7 @@
       </div>
     </section>
 
+    <!-- footer -->
     <footer>
       <div class="footer-col">
         <h3>Top Courses</h3>
@@ -223,6 +236,7 @@
       </div>
     </footer>
 
+ <!-- JavaScript for navbar closing -->
     <script>
       $("#menu").click(function () {
         $("nav .navigation ul").addClass("active");

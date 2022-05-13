@@ -18,6 +18,7 @@
     ></script>
   </head>
   <body>
+
     <!-- navigation -->
     <nav>
       <img src="images/studying.png" alt="" />
@@ -26,10 +27,10 @@
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
           <li><a href="index.html">Home</a></li>
-          <li><a  href="about.html">About</a></li>
-          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a  href="about.html">About</a></li>       
           <li><a href="course.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
       </div>
@@ -41,26 +42,27 @@
 
     
 
-    <footer >
-      <div class=" blog-footer-col">
+       <!-- footer -->
+    <footer>
+      <div class="footer-col">
         <h3>Top Courses</h3>
         <li>Web Development Course</li>
         <li>C Programming Course</li>
         <li>CodeX</li>
       </div>
-      <div class=" blog-footer-col">
+      <div class="footer-col">
         <h3>Quick Links</h3>
         <li>Jobs</li>
         <li>Brand Assest</li>
         <li>Terms of Service</li>
       </div>
-      <div class=" blog-footer-col">
+      <div class="footer-col">
         <h3>Resources</h3>
         <li>Guides</li>
         <li>Research</li>
         <li>Experts</li>
       </div>
-      <div class=" blog-footer-col">
+      <div class="footer-col">
         <h3>Newsletter</h3>
         <div class="subscribe">
           <p>you can trust us, we only send promo offer</p>
@@ -72,7 +74,8 @@
         <p>©2022, EDU-LAB. All Rights Reserved</p>
       </div>
     </footer>
-
+    
+ <!-- JavaScript for navbar closing -->
     <script>
       $("#menu").click(function () {
         $("nav .navigation ul").addClass("active");

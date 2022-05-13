@@ -11,13 +11,16 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
   </head>
   <body>
+
     <!-- navigation -->
     <nav>
       <img src="images/studying.png" alt="" />
@@ -26,16 +29,16 @@
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
           <li><a href="index.html">Home</a></li>
-          <li><a  href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a  href="about.html">About</a></li>          
           <li><a class="active" href="course.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
       </div>
     </nav>
-
-    <section id="about-home">
+ <!-- course home section -->
+    <section id="course-home">
       <h2>Our Courses</h2>
     </section>
 
@@ -125,45 +128,48 @@
         </div>
       </section>
 
-    <footer>
-      <div class="footer-col">
-        <h3>Top Courses</h3>
-        <li>Web Development Course</li>
-        <li>C Programming Course</li>
-        <li>CodeX</li>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <li>Jobs</li>
-        <li>Brand Assest</li>
-        <li>Terms of Service</li>
-      </div>
-      <div class="footer-col">
-        <h3>Resources</h3>
-        <li>Guides</li>
-        <li>Research</li>
-        <li>Experts</li>
-      </div>
-      <div class="footer-col">
-        <h3>Newsletter</h3>
-        <div class="subscribe">
-          <p>you can trust us, we only send promo offer</p>
-          <input type="text" placeholder="Your Email Address" />
-          <a href="#" class="blue">SUBSCRIBE</a>
+      <!-- footer -->
+      <footer>
+        <div class="footer-col">
+          <h3>Top Courses</h3>
+          <li>Web Development Course</li>
+          <li>C Programming Course</li>
+          <li>CodeX</li>
         </div>
-      </div>
-      <div class="copyright">
-        <p>©2022, EDU-LAB. All Rights Reserved</p>
-      </div>
-    </footer>
-
-    <script>
-      $("#menu").click(function () {
-        $("nav .navigation ul").addClass("active");
-      });
-      $("#menu-close").click(function () {
-        $("nav .navigation ul").removeClass("active");
-      });
-    </script>
-  </body>
-</html>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <li>Jobs</li>
+          <li>Brand Assest</li>
+          <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <li>Guides</li>
+          <li>Research</li>
+          <li>Experts</li>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <div class="subscribe">
+            <p>you can trust us, we only send promo offer</p>
+            <input type="text" placeholder="Your Email Address" />
+            <a href="#" class="blue">SUBSCRIBE</a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>©2022, EDU-LAB. All Rights Reserved</p>
+        </div>
+      </footer>
+      
+   <!-- JavaScript for navbar closing -->
+      <script>
+        $("#menu").click(function () {
+          $("nav .navigation ul").addClass("active");
+        });
+        $("#menu-close").click(function () {
+          $("nav .navigation ul").removeClass("active");
+        });
+      </script>
+    </body>
+  </html>
+  
