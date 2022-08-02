@@ -42,17 +42,20 @@
         <li><a href="course.html">Courses</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="form validation.html">Course Registration</a></li>
+        
         <li><a class="active" href="login.php">LogIn</a></li>
+        <li><a  href="registration.php">Registration</a></li>
 
       </ul>
       <img id="menu" src="images/menu.png" alt="" />
     </div>
   </nav>
 
-  <!-- home-section -->
-  <section id="course">
 
+  
+    
+  
+    <section id="contact">
     <div class="conatiner-fluid">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -70,13 +73,55 @@
               <input type="text" class="form-control" name="pass">
             </div>
 
-            <button type="submit" class="btn btn-primary col-12" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary col-12" name="submit">LogIn</button>
+            Not registered? <a href="registration.php"style="text-decoration: none">Register Here</a>
           </form>
         </div>
       </div>
     </div>
-  </section>
+    </section>
+    <footer>
+      <div class="footer-col">
+        <h3>Top Courses</h3>
+        <li>Web Development Course</li>
+        <li>C Programming Course</li>
+        <li>CodeX</li>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <li>Jobs</li>
+        <li>Brand Assest</li>
+        <li>Terms of Service</li>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <li>Guides</li>
+        <li>Research</li>
+        <li>Experts</li>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <div class="subscribe">
+          <p>you can trust us, we only send promo offer</p>
+          <input type="text" placeholder="Your Email Address" />
+          <a href="#" class="blue">SUBSCRIBE Now!!!!!</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>©2022, EDU-LAB. All Rights Reserved</p>
+      </div>
+    </footer>
 
+    <!-- JavaScript for navbar closing -->
+
+    <script>
+      $("#menu").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
