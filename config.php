@@ -1,17 +1,17 @@
 <?php
-  $serverName="localhost";
-  $userName="root";
-  $password="";
-  $dbName="website";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbName = "web_project";
 
+// Create connection
+$conn =  mysqli_connect($servername, $username, $password, $dbName);
 
-  $conn=mysqli_connect($serverName,$userName,$password,$dbName);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+else{
+    // echo "Connected successfully";
 
-  if(!$conn){
-       die("Connection failed: " .mysqli_connect_error());
-  }
-  else{
-    echo "<script>alert('DB Connected') </script>";
-  }
-
-?>
+}

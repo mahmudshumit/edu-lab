@@ -1,6 +1,9 @@
 <?php
-  $username = "shumit";
-  $pass ="123";
+
+
+
+  echo "Welcome to this page";
+  
   session_start();
   
 

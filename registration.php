@@ -5,14 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EDU-LAB</title>
-
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     />
-
     <link rel="stylesheet" href="style.css" />
-
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -23,7 +20,6 @@
     <!-- navigation -->
     <nav>
       <img src="images/studying.png" alt="" />
-
       <div class="navigation">
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
@@ -40,9 +36,7 @@
         <img id="menu" src="images/menu.png" alt="" />
       </div>
     </nav>
-
     <!-- registration-section -->
-
     <section id="registration">
      
       <div class="container">
@@ -73,15 +67,12 @@
             <input id="phone" name="r_mobile" type="text" />
             <div class="error"></div>
           </div>
-
           <button type="submit">Register</button>
           Already registered? <a href="login.php"style="text-decoration: none">Login Here</a>
         </form>
       </div>
     </section>
-
     <!-- footer -->
-
     <footer>
       <div class="footer-col">
         <h3>Top Courses</h3>
@@ -113,7 +104,6 @@
         <p>©2022, EDU-LAB. All Rights Reserved</p>
       </div>
     </footer>
-
     <!-- JavaScript for navbar closing -->
     <script>
       $("#menu").click(function () {
@@ -122,37 +112,28 @@
       $("#menu-close").click(function () {
         $("nav .navigation ul").removeClass("active");
       });
-
       //  Form Validation
       
-
       // const form = document.getElementById("form");
       // const username = document.getElementById("username");
       // const email = document.getElementById("email");
       // const phone = document.getElementById("phone");
       // const password = document.getElementById("password");
       // const confirmpassword = document.getElementById("confirmpassword");
-
-
       // form.addEventListener("submit", (e) => {
       //   e.preventDefault();
-
       //   validateInputs();
       // });
-
       // const setError = (element, message) => {
       //   const inputControl = element.parentElement;
       //   const errorDisplay = inputControl.querySelector(".error");
-
       //   errorDisplay.innerText = message;
       //   inputControl.classList.add("error");
       //   inputControl.classList.remove("success");
       // };
-
       // const setSuccess = (element) => {
       //   const inputControl = element.parentElement;
       //   const errorDisplay = inputControl.querySelector(".error");
-
       //   errorDisplay.innerText = "";
       //   inputControl.classList.add("success");
       //   inputControl.classList.remove("error");
@@ -173,14 +154,12 @@
       //   const re = /(\+88)?-?01[3-9]\d{8}/;
       //   return re.test(String(phone));
       // };
-
       // const validateInputs = () => {
       //   const usernameValue = username.value.trim();
       //   const emailValue = email.value.trim();
       //   const phoneValue = phone.value.trim();
       //   const passwordValue = password.value.trim();
       //   const confirmpasswordValue = confirmpassword.value.trim();
-
       //   if (usernameValue === "") {
       //     setError(username, "Username is required");
       //   } else {
@@ -198,7 +177,6 @@
       //   }
         
      
-
       //   if (emailValue === "") {
       //     setError(email, "Email is required");
       //   } else if (!isValidEmail(emailValue)) {

@@ -59,21 +59,21 @@
     <div class="conatiner-fluid">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-4 col-md-6 col-sm-12">
-          <form action="home.php" method="post">
+          <form action="loginAction.php" method="post">
             <div class="mb-3">
               <h3>Login Form</h3>
             </div>
             <div class="mb-3">
               username
-              <input type="text" class="form-control" name="username">
+              <input type="text" class="form-control" name="l_username">
 
             </div>
             <div class="mb-3">
               Password
-              <input type="text" class="form-control" name="pass">
+              <input type="text" class="form-control" name="l_pass">
             </div>
 
-            <button type="submit" class="btn btn-primary col-12" name="submit">LogIn</button>
+            <button type="submit" class="btn btn-primary col-12" name="login">LogIn</button>
             Not registered? <a href="registration.php"style="text-decoration: none">Register Here</a>
           </form>
         </div>

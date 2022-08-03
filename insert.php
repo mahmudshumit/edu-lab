@@ -13,33 +13,45 @@ $mobilePattern="/(\+88)?-?01[3-9]\d{8}/";
 $emailPattern="/(cse|eee|law)_\d{10}@lus\.ac\.bd/";
 $passpattern="/((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*?><+_-])).{8,20}/";
 
+ $duplicate_username=mysqli_query($conn,"SELECT * FROM `register` WHERE username='$r_username'");
+
+
 if(strlen($r_username)<3|| strlen($r_username)> 20){
-    echo "<script>alert('3-20 char username is allowed')";
+    echo "<script>alert('3-20 char username is allowed')</script>";
+    echo "<script>location.href='registration.php'</script>";
 }
-elseif(!preg_match($passpattern,$r_pass)){
-    echo "<script>alert('Valid Password is required')";
+elseif( preg_match($passpattern,$r_pass)){
+    echo "<script>alert('Valid Password is required')</script>";
+    echo "<script>location.href='registration.php'</script>";
 
 }
-elseif($r_pass!==$_r_con_pass){
-    echo "<script>alert(' Password and Confirm Password is not matching')";
+elseif($r_pass!==$r_con_pass){
+    echo "<script>alert(' Password and Confirm Password is not matching')</script>";
+    echo "<script>location.href='registration.php'</script>";
 
 }
 elseif(!preg_match($emailPattern,$r_email)){
-    echo "<script>alert('Valid Email is required')";
+    echo "<script>alert('Valid Email is required')</script>";
+    echo "<script>location.href='registration.php'</script>";
 }
 elseif(!preg_match($mobilePattern,$r_mobile)){
-    echo "<script>alert('Valid Mobile Number is required')";
+    echo "<script>alert('Valid Mobile Number is required')</script>";
+    echo "<script>location.href='registration.php'</script>";
 }
-else{
-      $insert_query="INSERT INTO `register`( `username`, `pass`, `email`, `mobile`) VALUES ('$r_username','$r_pass','$r_email','$r_mobile')";
-      if(! mysqli_query($conn,$insert_query)){
-        die("Not Inserted");
-      }else{
-        echo "<script>alert('Invalid')";
-        echo "<script>location.href='login.php'</script>";
+ elseif(mysqli_num_rows($duplicate_username)>0){
+    echo "<script>alert('User Name taken')</script>";
+    echo "<script>location.href='registration.php'</script>";
+ }
 
-      }
+       $insert_query="INSERT INTO `register`( `username`, `pass`, `email`, `mobile`) VALUES ('$r_username','$r_pass','$r_email','$r_mobile')";
+    if(!mysqli_query($conn,$insert_query)){
+        die("Not Inserted");
+    }else{
+        // echo "<script>alert('Inserted')</script>";
+        echo "<script>location.href='login.php'</script>";
     }
+       
+    
 
    
 
