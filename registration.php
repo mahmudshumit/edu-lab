@@ -46,11 +46,11 @@
     <section id="registration">
      
       <div class="container">
-        <form id="form" action="insert.php" method="post">
+        <form id="form" action="insert.php" method="post" >
           <h2>Registration</h2>
           <div class="input-control">
             <label for="username">Username</label>
-            <input id="username" name="r_name" type="text" />
+            <input id="username" name="r_username" type="text" />
             <div class="error"></div>
           </div>
           <div class="input-control">
@@ -74,7 +74,7 @@
             <div class="error"></div>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Register</button>
           Already registered? <a href="login.php"style="text-decoration: none">Login Here</a>
         </form>
       </div>
@@ -126,94 +126,94 @@
       //  Form Validation
       
 
-    //   const form = document.getElementById("form");
-    //   const username = document.getElementById("username");
-    //   const email = document.getElementById("email");
-    //   const phone = document.getElementById("phone");
-    //   const password = document.getElementById("password");
-    //   const confirmpassword = document.getElementById("confirmpassword");
+      // const form = document.getElementById("form");
+      // const username = document.getElementById("username");
+      // const email = document.getElementById("email");
+      // const phone = document.getElementById("phone");
+      // const password = document.getElementById("password");
+      // const confirmpassword = document.getElementById("confirmpassword");
 
 
-    //   form.addEventListener("submit", (e) => {
-    //     e.preventDefault();
+      // form.addEventListener("submit", (e) => {
+      //   e.preventDefault();
 
-    //     validateInputs();
-    //   });
+      //   validateInputs();
+      // });
 
-    //   const setError = (element, message) => {
-    //     const inputControl = element.parentElement;
-    //     const errorDisplay = inputControl.querySelector(".error");
+      // const setError = (element, message) => {
+      //   const inputControl = element.parentElement;
+      //   const errorDisplay = inputControl.querySelector(".error");
 
-    //     errorDisplay.innerText = message;
-    //     inputControl.classList.add("error");
-    //     inputControl.classList.remove("success");
-    //   };
+      //   errorDisplay.innerText = message;
+      //   inputControl.classList.add("error");
+      //   inputControl.classList.remove("success");
+      // };
 
-    //   const setSuccess = (element) => {
-    //     const inputControl = element.parentElement;
-    //     const errorDisplay = inputControl.querySelector(".error");
+      // const setSuccess = (element) => {
+      //   const inputControl = element.parentElement;
+      //   const errorDisplay = inputControl.querySelector(".error");
 
-    //     errorDisplay.innerText = "";
-    //     inputControl.classList.add("success");
-    //     inputControl.classList.remove("error");
-    //   };
-    //   const isValidPassword = (password) => {
-    //     const re = /((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*?><+_-])).{8,20}/;
-    //     return re.test(String(password).toLowerCase());
-    //   };
-    //   const isValidConfirmPassword = (confirmpassword) => {
-    //     const re = /((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*?><+_-])).{8,20}/;
-    //     return re.test(String(confirmpassword).toLowerCase());
-    //   };
-    //   const isValidEmail = (email) => {
-    //     const re = /(cse|eee|law)_\d{10}@lus\.ac\.bd/;
-    //     return re.test(String(email).toLowerCase());
-    //   };
-    //   const isValidNumber = (phone) => {
-    //     const re = /(\+88)?-?01[3-9]\d{8}/;
-    //     return re.test(String(phone));
-    //   };
+      //   errorDisplay.innerText = "";
+      //   inputControl.classList.add("success");
+      //   inputControl.classList.remove("error");
+      // };
+      // const isValidPassword = (password) => {
+      //   const re = /((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*?><+_-])).{8,20}/;
+      //   return re.test(String(password).toLowerCase());
+      // };
+      // const isValidConfirmPassword = (confirmpassword) => {
+      //   const re = /((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*?><+_-])).{8,20}/;
+      //   return re.test(String(confirmpassword).toLowerCase());
+      // };
+      // const isValidEmail = (email) => {
+      //   const re = /(cse|eee|law)_\d{10}@lus\.ac\.bd/;
+      //   return re.test(String(email).toLowerCase());
+      // };
+      // const isValidNumber = (phone) => {
+      //   const re = /(\+88)?-?01[3-9]\d{8}/;
+      //   return re.test(String(phone));
+      // };
 
-    //   const validateInputs = () => {
-    //     const usernameValue = username.value.trim();
-    //     const emailValue = email.value.trim();
-    //     const phoneValue = phone.value.trim();
-    //     const passwordValue = password.value.trim();
-    //     const confirmpasswordValue = confirmpassword.value.trim();
+      // const validateInputs = () => {
+      //   const usernameValue = username.value.trim();
+      //   const emailValue = email.value.trim();
+      //   const phoneValue = phone.value.trim();
+      //   const passwordValue = password.value.trim();
+      //   const confirmpasswordValue = confirmpassword.value.trim();
 
-    //     if (usernameValue === "") {
-    //       setError(username, "Username is required");
-    //     } else {
-    //       setSuccess(username);
-    //     }
-    //     if (passwordValue === "") {
-    //       setError(password, "Password is required");
-    //     } else {
-    //       setSuccess(password);
-    //     }
-    //     if (confirmpasswordValue === "") {
-    //       setError(confirmpassword, "Same Password is required");
-    //     } else {
-    //       setSuccess(confirmpassword);
-    //     }
+      //   if (usernameValue === "") {
+      //     setError(username, "Username is required");
+      //   } else {
+      //     setSuccess(username);
+      //   }
+      //   if (passwordValue!==confirmpasswordValue) {
+      //     setError(password, "Same Password is required");
+      //   } else if (passwordValue==confirmpasswordValue){
+      //     setSuccess(password);
+      //   }
+      //   if (passwordValue!==confirmpasswordValue) {
+      //     setError(confirmpassword, "Same Password is required");
+      //   } else if (passwordValue==confirmpasswordValue){
+      //     setSuccess(confirmpassword);
+      //   }
         
      
 
-    //     if (emailValue === "") {
-    //       setError(email, "Email is required");
-    //     } else if (!isValidEmail(emailValue)) {
-    //       setError(email, "Provide a valid email address");
-    //     } else {
-    //       setSuccess(email);
-    //     }
-    //     if (phoneValue === "") {
-    //       setError(phone, "Number is required");
-    //     } else if (!isValidNumber(phoneValue)) {
-    //       setError(phone, "Provide a valid Phone-Number");
-    //     } else {
-    //       setSuccess(phone);
-    //     }
-    //   };
+      //   if (emailValue === "") {
+      //     setError(email, "Email is required");
+      //   } else if (!isValidEmail(emailValue)) {
+      //     setError(email, "Provide a valid email address");
+      //   } else {
+      //     setSuccess(email);
+      //   }
+      //   if (phoneValue === "") {
+      //     setError(phone, "Number is required");
+      //   } else if (!isValidNumber(phoneValue)) {
+      //     setError(phone, "Provide a valid Phone-Number");
+      //   } else {
+      //     setSuccess(phone);
+      //   }
+      // };
     </script>
   </body>
 </html>
