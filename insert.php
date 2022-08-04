@@ -48,7 +48,7 @@ elseif(!preg_match($mobilePattern,$r_mobile)){
         die("Not Inserted");
     }else{
         // echo "<script>alert('Inserted')</script>";
-        echo "<script>location.href='login.php'</script>";
+        echo "<script>location.href='index.php'</script>";
     }
        
     

@@ -23,14 +23,12 @@
       <div class="navigation">
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="course.html">Courses</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blog.html">Blog</a></li>
           
-          <li><a  href="login.php">LogIn</a></li>
+          <li><a  href="index.php">LogIn</a></li>
           <li><a class="active" href="registration.php">Registration</a></li>
+          
+          
+          
          
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
@@ -68,7 +66,7 @@
             <div class="error"></div>
           </div>
           <button type="submit">Register</button>
-          Already registered? <a href="login.php"style="text-decoration: none">Login Here</a>
+          Already registered? <a href="index.php"style="text-decoration: none">Login Here</a>
         </form>
       </div>
     </section>
