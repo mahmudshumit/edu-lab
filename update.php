@@ -1,3 +1,18 @@
+<?php
+  include 'config.php';
+
+
+  $id=$_GET['id'];
+  $dataFetchQuery ="SELECT `id`, `name`, `mobile`, `course`, `image` FROM `profile` WHERE id='$id'";
+
+  $record = mysqli_query($conn,$dataFetchQuery);
+
+  $data=mysqli_fetch_array($record);
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,25 +76,25 @@
     <div class="conatiner-fluid">
       <div class="row justify-content-center ">
         <div class="col-lg-4 col-md-6 col-sm-12">
-          <form action="insertProfile.php" method="post" enctype="multipart/form-data">
+          <form action="updateAction.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-              <h3>Insert Profile</h3>
+              <h3>Update Profile</h3>
             </div>
             <div class="mb-3">
               Username
-              <input type="text" class="form-control" name="p_username">
+              <input type="text" class="form-control" name="p_username" value="<?php echo $data['name']?>" >
 
             </div>
             <div class="mb-3">
               Mobile Number 
-              <input type="text" class="form-control" name="p_mobile">
+              <input type="text" class="form-control" name="p_mobile"  value="<?php echo $data['mobile']?>"  required>
             </div>
             <div class="mb-3">
                 
               Add Course
               <!-- <input type="text" class="form-control" name="p_course"> -->
            
-              <select type="text" class="form-control" name="p_course">
+              <select type="text" class="form-control" name="p_course"  value="<?php echo $data['course']?>"  required>
              <option selected> </option>
              <option >Complete React Developer in 2022</option>
              <option >C Programming For Beginners</option>
@@ -87,20 +102,21 @@
              <option >Complete Guide In HTML, CSS & JavaScript Bootcampr</option>
              <option >PHP for Beginners - Become a PHP Master</option>
              <option >Java Programming for Complete Beginners</option>
-             
-
-             
-
              </select>
             
 </div>
              
             <div class="mb-3">
               Image 
-              <input type="file" class="form-control" name="p_image">
+              <input type="file" class="form-control" name="p_image"  value="<?php echo $data['image']?>"  required>
+            </div>
+            <div class="mb-3">
+              Image 
+             <img src="<?php echo $data['image']?>" alt="" width=100px >
+             <input type="hidden"  name="id"  value="<?php echo $data['id']?>" >
             </div>
 
-            <button type="submit" class="btn btn-primary col-12" name="submit">Insert</button>
+            <button type="submit" class="btn btn-primary col-12">Update</button>
            
           </form>
         </div>
@@ -108,44 +124,7 @@
     </div>
 
     
-    <div class="container pt-2">
-    <table class="table table-dark table-striped table-hover">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Number</th>
-      <th scope="col">Course</th>
-      <th scope="col">image</th>
-      <th scope="col">Update</th>
-      <th scope="col">Delete</th>
-    </tr>
-  </thead>
-  <tbody>
-       
-      <?php
-      include 'config.php';
-
-      $allData=mysqli_query($conn,"SELECT * FROM `profile`");
-      while($row = mysqli_fetch_array($allData)){
-        echo  "<tr>
-                 <td>$row[id]</td>
-                 <td>$row[name]</td>
-                 <td>$row[mobile]</td>
-                 <td>$row[course]</td>
-                 <td><img src='$row[image]' width='70'=</td>
-                 <td><a class ='btn btn-info' href='update.php?id=$row[id]'>Update</a></td>
-                 <td><a class ='btn btn-danger' href='delete.php?id=$row[id]'>Delete</a></td>
-
-
-                </tr>";
-      }
-      ?>
-
-
-  </tbody>
-</table>
-    </div>
+  
 
     </section>
     <footer>

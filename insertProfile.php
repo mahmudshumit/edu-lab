@@ -1,6 +1,9 @@
 <?php
  include 'config.php';
 
+
+ 
+
 $profileName=$_POST['p_username'];
 $profileNumber=$_POST['p_mobile'];
 $profileCourse=$_POST['p_course'];
@@ -27,7 +30,7 @@ move_uploaded_file($profileImageLocation,$profileImage_des);//server folder save
 
 
 
-echo $profileImage_des ;
+// echo $profileImage_des ;
 
 
 
@@ -39,7 +42,7 @@ echo $profileImage_des ;
 $profileInsertQuery="INSERT INTO `profile`( `name`, `mobile`, `course`, `image`) VALUES ('$profileName','$profileNumber','$profileCourse','$profileImage_des')";
 if(mysqli_query($conn,$profileInsertQuery)){
     // echo "<script>alert('Product Inserted !')</script>";
-    echo "<script>location.href='index.php'</script>";
+    echo "<script>location.href='profile.php'</script>";
 
 }
 else{
