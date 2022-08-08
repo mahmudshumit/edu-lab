@@ -31,13 +31,16 @@
       <div class="navigation">
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
-          <li><a  href="index.php">LogIn</a></li>
-          <li><a  href="registration.php">Registration</a></li>
+          
           <li><a href="information.php">Home</a></li>
           <li><a href="about.html">About</a></li>
-          
+           
           <li><a  href="blog.html">Blog</a></li>
           <li><a  href="profile.php">User Profile</a></li>
+          <li><a  href="index.php">LogIn</a></li>
+          <li><a  href="registration.php">Registration</a></li>
+          
+          <li><a href='logout.php'>Log out </a></li>
          
         </ul>
         <img id="menu" src="images/menu.png" alt="" />
